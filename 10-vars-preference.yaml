@@ -15,3 +15,9 @@
     ansible.builtin.debug:
       msg: "Hello,Good {{wishes}}"
 
+#1. arguments
+#2.
+#3.
+#4.
+#5.
+#6.
