@@ -5,7 +5,7 @@
     Trainer: "Siva"
     Duration: "120hrs"
   tasks:
-  - name: print information
+  - name: print override information
     vars:
       Course: "Ansible"
     ansible.builtin.debug:
