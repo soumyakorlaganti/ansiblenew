@@ -42,7 +42,7 @@
       msg: "min age: {{ ages | min}}, max age: {{ ages | max}}"
 
 - name: convert dictonary into items/list
-  hosts: local hosts
+  hosts: localhost
   vars:
     my_dict: #this is called map or dictionary or key value pair
       Course: Ansible
@@ -55,4 +55,3 @@
   - name: after convert
     ansible.builtin.debug:
       msg: "after convert: {{my_dict | dict2items}}"
-      
