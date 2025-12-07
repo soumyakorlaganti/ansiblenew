@@ -1,5 +1,5 @@
 - name: conditions
-  hosts: localhost
+  hosts: web
   become: yes
   tasks:
   - name: check user exists or not
@@ -9,8 +9,12 @@
 
   - name: print user information
     ansible.builtin.debug:
-      msg: "user info: {{USER}}"  
-      
+      msg: "User info: {{USER}}"  
+
+  - name: create user
+    ansible.builtin.command: useradd expense
+    when: USER.rc != 0 #condition 
+
   - name: say hello
     ansible.builtin.debug:
       msg: "hello"
