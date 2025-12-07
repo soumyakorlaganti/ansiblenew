@@ -1,6 +1,6 @@
 - name: check number
   hosts: localhost
-  vars_prompt:
+  vars_prompt: # prompts are always considered as text/string
   - name: number
     prompt: please enter number
     private: no
